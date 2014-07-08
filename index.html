@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cobold Console</title>
+	<!--- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/console_home.css" />	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/cobold_console-0.1.js"></script>
+	
+</head>
+<body>
+
+	<h1><span class="titleCobold">Cobold</span><span class="titleConsole">Console</span></h1>
+	<div class="subtitle">
+		An Open-Source HTML5 Console
+		<br />
+		Excellent for text-based games
+		<br />
+		Designed with &hearts; by <a href="http://lukenickerson.github.io">Luke Nickerson</a>
+		<br />
+		for the ASCII Enthusiasts Game Jam 
+	</div>
+	
+	
+	
+	<div class="mainButtons">
+		<a href="omicron_game.html">Try it out now &gt; Omicron Game</a>
+		<a href="hello_world.html">Basic Console Example &gt; Hello World</a>
+		<a href="https://github.com/Lukenickerson/cobold-console">Cobold Console GitHub Repo</a>
+	</div>
+	
+	<a href="omicron_game.html">
+	<img src="images/omicron_screenshot.png" class="exampleScreenshot" alt="Screenshot of Omicron Game" />
+	</a>
+	
+	<a href="https://github.com/Lukenickerson/cobold-console"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+	
+	<article>
+		<h1>How to Use the Console</h1>
+		<h2>Setup</h2>
+		<ol>
+			<li>Include jQuery
+				<code>
+					&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+				</code>
+			</li>
+			<li>Include the latest Cobold Console code
+				<code>
+					&lt;script src="js/cobold_console-0.1.js"&gt;&lt;/script&gt;
+				</code>
+			</li>
+			<li>Include the HTML for the Console
+<code><pre>
+&lt;div id="console"&gt;
+  &lt;div id="consoleOutput"&gt;
+    Loading...
+  &lt;/div&gt;
+  &lt;div id="consoleInput"&gt;
+    &lt;form method="get" post=""&gt;
+      &lt;label for="consoleInputTextArea"&gt;&lt;/label&gt;
+      &lt;textarea id="consoleInputTextArea" autocapitalize="off"&gt;
+      &lt;/textarea&gt;
+      &lt;!--- &lt;input type="submit" /&gt; ---&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre></code>
+			</li>
+			<li>Include the CSS styling
+				<code>
+					&lt;link rel="stylesheet" href="css/console_alpha.css" /&gt;
+				</code>
+			</li>
+			<li>Instantiate the Cobold Console
+<code><pre>
+$(document).ready(function(){
+	window.cc = new ConsoleClass();
+});
+</pre></code>
+			</li>
+		</ol>
+		
+		<h2>Functions</h2>
+		<h3>Output</h3>
+		<ul>
+			<li>.add( <span class="params">anything</span> )</li>
+			<li>.addDelay( <span class="params">duration in milliseconds</span> )</li>
+			<li>.addLine( <span class="params">string</span> )</li>
+			<li>.addNewLine()</li>
+			<li>.addText( <span class="params">string</span> )</li>
+			<li>.clear()</li>
+			<li>.refresh()</li>
+			<li>.rush( <span class="params">milliseconds</span> )</li>
+			<li>.setPrompt( <span class="params">string</span> )</li>
+		</ul>
+		<h3>Input</h3>
+		<ul>
+			<li>.acceptOneCharacterInput()</li>
+			<li>.acceptTextEnterInput()</li>
+			<li>.clearInput()</li>
+			<li>.startInput()</li>
+			<li>.stopInput()</li>
+			<li>.submitInput( <span class="params">string</span> )</li>
+		</ul>
+		<h3>Special</h3>
+		<ul>
+			<li>.submitCallback( <span class="params">string</span> )
+				<br />Redefine this function so you can send input to your app
+			</li>
+		</ul>
+		
+		<h2>Example</h2>
+<code><pre>
+	var cc = new ConsoleClass();
+	cc.addLine("Hello")
+		.addDelay(1000)
+		.addLine("World")
+		.addDelay(1000);
+	cc.submitCallback = function (x) {
+		alert(x);
+	}
+</pre></code>
+		<ul>
+			<li><a href="hello_world.html">Look at a basic Hello World example</a></li>
+			<li><a href="omicron_game.html">Try it out a simple game: Omicron</a></li>
+		</ul>
+		<h2>Go Forth</h2>
+		<ol>
+			<li>Make stuff</li>
+			<li><a href="https://github.com/Lukenickerson/cobold-console">Contribute to the Cobold Console GitHub Repo</a></li>
+		</ol>
+	</article>
+
+	<footer>
+		<p>&copy; 2014 Luke Nickerson</p>
+		
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+		<img alt="Creative Commons License" style="border-width:0" 
+			src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+		<br />This work is licensed under a 
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+		Creative Commons Attribution 4.0 International License</a>.
+	</footer>
+		
+	
+</body>
+</html>

@@ -1,0 +1,79 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Courier New', 'Lucida Console', monospace;
+	text-align: center;
+	color: #333;
+	background: #fff;
+}
+a { text-decoration: none; }
+a:hover {
+	text-decoration: underline;
+}
+
+body h1 {
+	font-size: 450%;
+}
+.titleCobold {
+	display: block;
+	font-weight: normal;
+	font-size: 90%;
+	letter-spacing: 0.18em;
+}
+.subtitle {
+	margin: 3em 0 5em 0;
+}
+.subtitle a {	color: inherit; }
+
+
+.mainButtons a {
+	display: block;
+	padding: 1em;
+	margin: 2em auto;
+	width: 50%;
+	min-width: 5em;
+	max-width: 22em;
+	background-color: #333; /* #121621; */
+	color: white;
+	font-size: 140%;
+	border-radius: 1em;
+	box-shadow: 0 0.5em 0 #121621;
+}
+
+.exampleScreenshot {
+	margin: 3em 0 6em 0;
+	max-width: 400px;
+	width: 95%;
+}
+
+article {
+	width: 50%;
+	min-width: 20em;
+	text-align: left;
+	margin: 2em auto 10em auto;
+}
+article > h1 {
+	font-size: 200%;
+}
+article ol li {
+	margin: 0 0 1em 0;
+}
+code {
+	display: block;
+	color: #0066ff;
+}
+.params {
+	color: #44aaaa;
+	font-style: italic;
+}
+
+footer {
+	font-size: 80%;
+	display: block;
+	margin: 5em auto;
+	width: 50%;
+	min-width: 20em;
+}
+

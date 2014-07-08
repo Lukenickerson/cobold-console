@@ -1,0 +1,70 @@
+
+#console
+,#consoleInput textarea {
+    font-size: 13px;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+}
+#console {
+    border: solid 1px #ccc;
+    padding: 1em;
+    margin: 0 auto;
+    width: 50ch;
+    height: 50ch;
+    
+    word-wrap: break-word;
+    overflow: hidden;
+    
+    
+    border: solid 1px #111;
+    text-shadow: 0 0 0.5em rgba(255,255,200,0.5);
+    box-shadow: inset 0 0 2em rgba(255,255,200,0.1);
+    border-radius: 0.5em;
+    background-color: #151911;
+    color: #aaff44;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      rgba(0, 0, 0, 0.3) 2px,
+      rgba(0, 0, 0, 0.3) 10px
+    ),     #151911;
+     
+}
+
+#console pre {
+	white-space: pre-wrap;
+}
+
+#console .input { color: #66dd44; }
+
+#consoleInput form {
+    position: relative;
+    padding-left: 1em;
+}
+
+#consoleInput textarea {
+    display: inline-block;
+    width: 48ch;
+    height: 1em;
+    padding: 0.4em 0;
+    border: solid 1px rgba(0,0,0,0.1);
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    background-color: transparent;
+    color: #33bbaa;
+    text-shadow: 0 0 0.5em rgba(200,255,255,0.5);
+}
+#consoleInput label {
+    display: inline-block;
+    position: absolute; 
+    top: 0; left: 0;
+    color: #66ddcc;
+    font-weight: bold;
+    /* content: ">"; */
+    padding: 0.4em 0;
+}
+#consoleInput label.long {
+	position: static;
+	
+}

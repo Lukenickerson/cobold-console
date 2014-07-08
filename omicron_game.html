@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Omicron - Game using Cobold Console</title>
+	<!--- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/console_alpha.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/cobold_console-0.1.js"></script>
+	<script src="js/omicron-0.1.js"></script>
+	<style>
+		body, html {
+			padding: 0; margin: 0;
+			height: 100%;
+		}    
+		body {
+			box-sizing: border-box;
+			background-color: #111;
+			/* box-shadow: inset 0 0 2em rgba(0,0,0,0.3); */
+			padding: 1em;
+		}	
+	
+		#console,#consoleInput textarea { font-size: 18px; }
+		header > h1 {
+			text-align: center;
+			color: #454;
+			font-family: 'Courier New', 'Lucida Console', monospace;
+			text-shadow: 1px 1px 0 black, 0 0 0.5em rgba(255,0,255,0.5);
+		}
+		section {
+			box-sizing: border-box;
+			width: 40%;
+			margin: 5em 5% 5em 5%;
+			float: left;
+			color: #454;
+			font-size: 80%;
+			font-family: 'Courier New', 'Lucida Console', monospace;
+			text-shadow: 1px 1px 0 black;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Omicron</h1>
+	</header>
+
+
+	<div id="console">
+		<div id="consoleOutput">
+			Loading...
+		</div>
+		<div id="consoleInput">
+			<form method="get" post="">
+				<label for="consoleInputTextArea">&gt;</label>
+				<textarea id="consoleInputTextArea" autocapitalize="off"></textarea>
+				<!--- <input type="submit" /> --->
+			</form>
+		</div>
+	</div>
+
+	<section class="roadmap">
+		<h1>Note: This Game is Not Complete</h1>
+		<h2>Development Roadmap</h2>
+		<ol>
+			<li>Shelter</li>
+			<li>Perception/spot</li>
+			<li>Weapons - randomly found</li>
+			<li>Weapon swap</li>
+			<li>Better Combat, better fleeing</li>
+			<li>Crafting: basic items</li>
+			<li>Travel To: new lands</li>
+			<li>Warning messages when traits are low</li>
+			<li>Improve difficulty-based enemies</li>
+			<li>End game</li>
+		</ol>
+	</section>
+	<section class="wishlist">
+		<h2>Wishlist</h2>
+		<ul>
+			<li>Armor items</li>
+			<li>Inventory management</li>
+			<li>Bags</li>
+			<li>NPCs - peaceful, factions, vendors</li>
+			<li>Mutations</li>
+			<li>Earn XP on Enemy trait</li>
+			<li>Earn weapon XP</li>
+			<li>Travel to: past locations</li>
+			<li>Temp conditions</li>
+			<li>Weather</li>
+			<li>Advanced crafting</li>
+		</ul>
+	</section>
+</body>
+</html>

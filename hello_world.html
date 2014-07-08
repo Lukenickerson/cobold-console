@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cobold Console: Hello World Example</title>
+	<!--- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/console_alpha.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/cobold_console-0.1.js"></script>
+	<style>
+		body, html {
+			padding: 0; margin: 0;
+			height: 100%;
+		}    
+		body {
+			box-sizing: border-box;
+			box-shadow: inset 0 0 2em rgba(0,0,0,0.4);
+			padding: 3em 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="console">
+		<div id="consoleOutput">
+			Loading...
+		</div>
+		<div id="consoleInput">
+			<form method="get" post="">
+				<label for="consoleInputTextArea">&gt;</label>
+				<textarea id="consoleInputTextArea"></textarea>
+				<!--- <input type="submit" /> --->
+			</form>
+		</div>
+	</div>
+
+
+<script>
+	var cc = new ConsoleClass();
+	cc.addLine("\n\nHello World!\n\n");
+</script>
+
+</body>
+</html>
